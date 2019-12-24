@@ -10,25 +10,24 @@ class Controller extends ControllerMVC{
 
   List<String> titleBotons = new List<String>();
 
-  DatosIng(){
-
-    //titleBotons[0]=ing.inlesg;
-    titleBotons.add(ing.inlesg);
+  List<String> DatosIng(){
+    titleBotons.add(ing.espanolg);
     titleBotons.add(ing.francesg);
+    titleBotons.add(ing.inlesg);
     return titleBotons;
   }
 
-  String DatosEsp(){
-    //titleBotons[0]=esp.espanolg;
-    //titleBotons[1]=esp.inlesg;
-    //titleBotons[2]=esp.francesg;
-    return "logro";
+  List<String> DatosEsp(){
+    titleBotons.add(esp.espanolg);
+    titleBotons.add(esp.francesg);
+    titleBotons.add(esp.inlesg);
+    return titleBotons;
   }
 
-  DatosFre(){
+  List<String> DatosFre(){
     titleBotons.add(fra.espanolg);
-    titleBotons.add(fra.inlesg);
     titleBotons.add(fra.francesg);
+    titleBotons.add(fra.inlesg);
     return titleBotons;
   }
 

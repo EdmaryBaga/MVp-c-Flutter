@@ -27,8 +27,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  connectivity: ^0.4.3+6
-  mvc_application:
+
+
 
 
 

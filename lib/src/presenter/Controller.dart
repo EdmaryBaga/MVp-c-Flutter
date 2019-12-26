@@ -2,7 +2,7 @@ import '../../model.dart' show English, French, spanish;
 import '../../controller.dart' show ControllerMVC;
 
 
-class Controller extends ControllerMVC{
+class Controller {
 
   var ing = English();
   var esp = spanish();

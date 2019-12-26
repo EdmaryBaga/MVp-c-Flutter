@@ -1,12 +1,17 @@
-import 'package:flutter/material.dart' show runApp;
-import 'package:mvc_application/mvc.dart' show App;
+import 'package:change_lenguaje/src/presenter/title_presenter.dart';
+import 'package:flutter/material.dart' show BuildContext, MaterialApp, StatelessWidget, ThemeData, Widget, runApp;
 import 'package:change_lenguaje/view.dart' ;
-import 'package:mvc_application/src/view/app.dart';
 
-void main() => runApp(MyApp());
 
-class MyApp extends App{
+void main() => runApp(new MyApp());
+
+class MyApp extends StatelessWidget{
   @override
-  AppView createView() => LenguageOptions();
-
+  Widget build(BuildContext context){
+    return new MaterialApp(
+      title: 'MVP botons',
+      theme: new ThemeData.dark(),
+      home: new LenguageMenu(new BasicTitlePResenter(), title: 'Flutter Demo Home Page'),
+    );
+  }
 }

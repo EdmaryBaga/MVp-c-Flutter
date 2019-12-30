@@ -17,9 +17,15 @@ class BasicTitlePResenter implements TittlePresenter{
   TitleViewModel _titleViewModel = TitleViewModel("yap", "yap2", "yap3");
   TitleView _titleView = TitleView();
 
+
+  @override
+  void set titleView(TitleView value) {
+    _titleView = value;
+    this._titleView.refreshTitle(this._titleViewModel);
+  }
+
   @override
   void onButtonClicked(String Lenguaje) {
-    //implemetacion del boton
     print("Evento del boton");
     if(Lenguaje=="español"){
       this._titleViewModel.title= _spanol.espanolg;
@@ -32,18 +38,13 @@ class BasicTitlePResenter implements TittlePresenter{
       this._titleViewModel.btn2=_ingles.inlesg;
       this._titleViewModel.btn3=_ingles.francesg;
       this._titleView.refreshTitle(this._titleViewModel);
-    }else if (Lenguaje=="frances"){
+    }
+    else if (Lenguaje=="frances"){
       this._titleViewModel.title= _frances.espanolg;
       this._titleViewModel.btn2=_frances.inlesg;
       this._titleViewModel.btn3=_frances.francesg;
       this._titleView.refreshTitle(this._titleViewModel);
     }
-  }
-
-  @override
-  void set titleView(TitleView value) {
-    _titleView = value;
-    this._titleView.refreshTitle(this._titleViewModel);
   }
 
 }

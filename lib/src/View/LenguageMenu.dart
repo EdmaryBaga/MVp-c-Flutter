@@ -1,4 +1,3 @@
-
 import 'package:change_lenguaje/src/Model/title_viewmodel.dart';
 import 'package:change_lenguaje/src/View/TitleView.dart';
 import 'package:change_lenguaje/src/presenter/title_presenter.dart';
@@ -19,25 +18,14 @@ class LenguageMenu extends StatefulWidget {
 String btn1= "v0";
 
 
-
 class _LenguageMenuState extends State<LenguageMenu> implements TitleView{
 
   TitleViewModel _titleViewModel;
 
   @override
-  Widget build(BuildContext context){
-    return Scaffold(
-      appBar: AppBar(title: Text(this._titleViewModel==null?widget.title : this._titleViewModel),),
-      body: Column(
-        children: <Widget>[
-
-          RaisedButton(child: Text(btn1), onPressed: (){
-            widget.presenter.onButtonClicked();
-          },),
-
-        ],
-      ),
-    );
+  void initState(){
+    super.initState();
+    this.widget.presenter.titleView=this;
   }
 
   @override
@@ -46,4 +34,21 @@ class _LenguageMenuState extends State<LenguageMenu> implements TitleView{
       this._titleViewModel = viewModel;
     });
   }
+
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      appBar: AppBar(title: Text("Change lenguaje"),),
+      body: Column(
+        children: <Widget>[
+
+          RaisedButton(child: Text(this._titleViewModel==null?widget.title : this._titleViewModel.title.toString()), onPressed: (){
+            widget.presenter.onButtonClicked();
+          },),
+
+        ],
+      ),
+    );
+  }
+
 }

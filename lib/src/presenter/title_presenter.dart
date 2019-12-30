@@ -21,13 +21,13 @@ class BasicTitlePResenter implements TittlePresenter{
 
     this._titleViewModel.title= _spanol.espanolg;
     this._titleView.refreshTitle(this._titleViewModel);
-
     //recuperar el titulo de un boton y pasarlo a la vista
     //String val= this._spanol.inlesg;
   }
 
   @override
   void set titleView(TitleView value) {
+    _titleView = value;
     this._titleView.refreshTitle(this._titleViewModel);
   }
 

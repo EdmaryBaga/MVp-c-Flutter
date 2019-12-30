@@ -4,7 +4,7 @@ class Spanish{
   String frances = "frances";
   String ingles = "ingles";
 
-  String get espanolg => "prueba";
+  String get espanolg => espanol;
   String get francesg => frances;
   String get inlesg => ingles;
 

@@ -7,16 +7,14 @@ class LenguageMenu extends StatefulWidget {
 
   final TittlePresenter presenter;
 
-  LenguageMenu(this.presenter, {Key key, this.title}) : super(key: key);
+  LenguageMenu(this.presenter, {Key key, this.title, this.btn2}) : super(key: key);
 
   final String title;
+  final String btn2;
 
   @override
   _LenguageMenuState createState() => new _LenguageMenuState();
 }
-
-String btn1= "v0";
-
 
 class _LenguageMenuState extends State<LenguageMenu> implements TitleView{
 
@@ -43,6 +41,10 @@ class _LenguageMenuState extends State<LenguageMenu> implements TitleView{
         children: <Widget>[
 
           RaisedButton(child: Text(this._titleViewModel==null?widget.title : this._titleViewModel.title.toString()), onPressed: (){
+            widget.presenter.onButtonClicked();
+          },),
+
+          RaisedButton(child: Text(this._titleViewModel==null?widget.btn2 : this._titleViewModel.btn2), onPressed: (){
             widget.presenter.onButtonClicked();
           },),
 

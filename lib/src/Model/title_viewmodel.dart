@@ -1,5 +1,7 @@
 class TitleViewModel {
-  String title = "v0";
+  String title;
+  String btn2;
+  String btn3;
 
-  TitleViewModel(this.title);
+  TitleViewModel(this.title, this.btn2);
 }

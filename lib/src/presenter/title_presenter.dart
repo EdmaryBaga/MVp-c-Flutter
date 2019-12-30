@@ -11,7 +11,7 @@ class TittlePresenter{
 class BasicTitlePResenter implements TittlePresenter{
 
   Spanish _spanol = Spanish();
-  TitleViewModel _titleViewModel = TitleViewModel("yap");
+  TitleViewModel _titleViewModel = TitleViewModel("yap", "yap2");
   TitleView _titleView = TitleView();
 
   @override
@@ -20,6 +20,8 @@ class BasicTitlePResenter implements TittlePresenter{
     print("Evento del boton");
 
     this._titleViewModel.title= _spanol.espanolg;
+    this._titleViewModel.btn2=_spanol.inlesg;
+
     this._titleView.refreshTitle(this._titleViewModel);
     //recuperar el titulo de un boton y pasarlo a la vista
     //String val= this._spanol.inlesg;

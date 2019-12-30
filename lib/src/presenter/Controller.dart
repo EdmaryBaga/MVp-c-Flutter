@@ -1,11 +1,11 @@
-import '../../model.dart' show English, French, spanish;
+import '../../model.dart' show English, French, Spanish;
 import '../../controller.dart' show ControllerMVC;
 
 
 class Controller {
 
   var ing = English();
-  var esp = spanish();
+  var esp = Spanish();
   var fra = French();
 
   List<String> titleBotons = new List<String>();

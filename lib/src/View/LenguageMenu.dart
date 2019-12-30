@@ -41,20 +41,20 @@ class _LenguageMenuState extends State<LenguageMenu> implements TitleView{
       body: Column(
         children: <Widget>[
 
-          RaisedButton(child: Text(this._titleViewModel==null?widget.title : this._titleViewModel.title.toString()),
+          RaisedButton(child: Text(this._titleViewModel.title.toString()),
             onPressed: (){
               widget.presenter.onButtonClicked("español");
             },
           ),
 
-          RaisedButton(child: Text(this._titleViewModel==null?widget.btn2 : this._titleViewModel.btn2),
+          RaisedButton(child: Text(this._titleViewModel.btn2),
             onPressed: (){
              widget.presenter.onButtonClicked("ingles");
            },
           ),
 
-          RaisedButton(child: Text(this._titleViewModel==null?widget.btn3 : this._titleViewModel.btn3),
-            onPressed: (){
+          RaisedButton(child: Text(this._titleViewModel.btn3),
+            onPressed:(){
               widget.presenter.onButtonClicked("frances");
             },
           ),

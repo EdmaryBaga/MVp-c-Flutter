@@ -3,5 +3,5 @@ class TitleViewModel {
   String btn2;
   String btn3;
 
-  TitleViewModel(this.title, this.btn2);
+  TitleViewModel(this.title, this.btn2, this.btn3);
 }

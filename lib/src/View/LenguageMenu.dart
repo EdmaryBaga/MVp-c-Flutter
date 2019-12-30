@@ -7,10 +7,11 @@ class LenguageMenu extends StatefulWidget {
 
   final TittlePresenter presenter;
 
-  LenguageMenu(this.presenter, {Key key, this.title, this.btn2}) : super(key: key);
+  LenguageMenu(this.presenter, {Key key, this.title, this.btn2, this.btn3}) : super(key: key);
 
   final String title;
   final String btn2;
+  final String btn3;
 
   @override
   _LenguageMenuState createState() => new _LenguageMenuState();
@@ -40,13 +41,23 @@ class _LenguageMenuState extends State<LenguageMenu> implements TitleView{
       body: Column(
         children: <Widget>[
 
-          RaisedButton(child: Text(this._titleViewModel==null?widget.title : this._titleViewModel.title.toString()), onPressed: (){
-            widget.presenter.onButtonClicked();
-          },),
+          RaisedButton(child: Text(this._titleViewModel==null?widget.title : this._titleViewModel.title.toString()),
+            onPressed: (){
+              widget.presenter.onButtonClicked("español");
+            },
+          ),
 
-          RaisedButton(child: Text(this._titleViewModel==null?widget.btn2 : this._titleViewModel.btn2), onPressed: (){
-            widget.presenter.onButtonClicked();
-          },),
+          RaisedButton(child: Text(this._titleViewModel==null?widget.btn2 : this._titleViewModel.btn2),
+            onPressed: (){
+             widget.presenter.onButtonClicked("ingles");
+           },
+          ),
+
+          RaisedButton(child: Text(this._titleViewModel==null?widget.btn3 : this._titleViewModel.btn3),
+            onPressed: (){
+              widget.presenter.onButtonClicked("frances");
+            },
+          ),
 
         ],
       ),

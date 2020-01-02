@@ -1,7 +1,5 @@
 class TitleViewModel {
-  String title;
-  String btn2;
-  String btn3;
+  String urlImage;
 
-  TitleViewModel(this.title, this.btn2, this.btn3);
+  TitleViewModel(this.urlImage);
 }

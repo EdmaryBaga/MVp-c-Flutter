@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget{
     return new MaterialApp(
       title: 'MVP botons',
       theme: new ThemeData.dark(),
-      home: new LenguageMenu(new BasicTitlePResenter(), title: 'Flutter Demo Home Page'),
+      home: new LenguageMenu(new BasicTitlePResenter()),
     );
   }
 }

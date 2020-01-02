@@ -1,3 +1,3 @@
-export 'src/Model/English.dart';
-export 'src/Model/Frensh.dart';
-export 'src/Model/Spanish.dart';
+export 'src/Model/Leon.dart';
+export 'src/Model/Delfin.dart';
+export 'src/Model/Panda.dart';

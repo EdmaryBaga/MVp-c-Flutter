@@ -7,11 +7,11 @@ class LenguageMenu extends StatefulWidget {
 
   final TittlePresenter presenter;
 
-  LenguageMenu(this.presenter, {Key key, this.title, this.btn2, this.btn3}) : super(key: key);
+  LenguageMenu(this.presenter, {Key key, this.uriImagen}) : super(key: key);
 
-  final String title;
-  final String btn2;
-  final String btn3;
+
+  final String uriImagen;
+
 
   @override
   _LenguageMenuState createState() => new _LenguageMenuState();
@@ -24,7 +24,7 @@ class _LenguageMenuState extends State<LenguageMenu> implements TitleView{
   @override
   void initState(){
     super.initState();
-    this.widget.presenter.titleView=this;
+    this.widget.presenter.titleView = this;
   }
 
   @override
@@ -37,27 +37,29 @@ class _LenguageMenuState extends State<LenguageMenu> implements TitleView{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(title: Text("Change lenguaje"),),
+      appBar: AppBar(title: Text("Change Animal"),),
       body: Column(
         children: <Widget>[
 
-          RaisedButton(child: Text(this._titleViewModel==null?widget.title : this._titleViewModel.title.toString()),
+          RaisedButton(child: Text("panda"),
             onPressed: (){
-              widget.presenter.onButtonClicked("español");
+              widget.presenter.onButtonClicked("panda");
             },
           ),
 
-          RaisedButton(child: Text(this._titleViewModel==null?widget.btn2 : this._titleViewModel.btn2),
+          RaisedButton(child: Text("leon"),
             onPressed: (){
-             widget.presenter.onButtonClicked("ingles");
+             widget.presenter.onButtonClicked("leon");
            },
           ),
 
-          RaisedButton(child: Text(this._titleViewModel==null?widget.btn3 : this._titleViewModel.btn3),
+          RaisedButton(child: Text("delfin"),
             onPressed: (){
-              widget.presenter.onButtonClicked("frances");
+              widget.presenter.onButtonClicked("delfin");
             },
           ),
+
+          Image.network(this._titleViewModel.urlImage),
 
         ],
       ),
